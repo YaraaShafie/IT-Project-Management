@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- section hearder -->
+    <section id="header">
+        <a href="#"><img src="" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html" class="active">home</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li id="bag-shopping"><a href="cart.html"><i class="fa fa-bag-shopping"></i></a></li>
+                <a href="#" id="close" onclick="openBar()"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-bag-shopping media"></i></a>
+            <i id="bar" class="fa-solid fa-bars media" onclick="openBar()"></i>
+        </div>
+    </section>
+    <!-- home page -->
+    <section id="hero">
+        <h2>Welcome to qatma application</h2>
+        <h1>Reserve and order now with one click</h1>
+    </section>
+    <!-- feature page -->
+    <section class="section-p1" id="feature">
+        <div class="box">
+            <img src="img/features/f1.png" alt="">
+            <p>table reservation</p>
+        </div>
+        <div class="box">
+            <img src="img/features/f2.png" alt="">
+            <p>online order</p>
+        </div>
+        <div class="box">
+            <img src="img/features/f3.png" alt="">
+            <p>save money</p>
+        </div>
+        <div class="box">
+            <img src="img/features/f4.png" alt="">
+            <p>promotions</p>
+        </div>
+    </section>
+    <section id="product1" class="section-p1">
+        <h2>Qatma Menu</h2>
+        <p>Make an order now</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/images (1).jpeg" alt="">
+                <div class="des">
+                    <span>Sandwiches</span>
+                    <h5>Shawerma Lahma</h5>
+                    <h4>55 EGP</h4>
+                </div>
+                <a href="#"><i class="fa fa-cart-shopping cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/shawerma.jpeg" alt="">
+                <div class="des">
+                    <span>Sandwiches</span>
+                    <h5>Shawerma Ferakh</h5>
+                    <h4>55 EGP</h4>
+                </div>
+                <a href="#"><i class="fa fa-cart-shopping cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/hawah.jpeg" alt="">
+                <div class="des">
+                    <span>Sandwiches</span>
+                    <h5>Hawawshy</h5>
+                    <h4>75 EGP</h4>
+                </div>
+                <a href="#"><i class="fa fa-cart-shopping cart"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/KOFTA.jpeg" alt="">
+                <div class="des">
+                    <span>Sandwiches</span>
+                    <h5>Kofta</h5>
+                    <h4>55 EGP</h4>
+                </div>
+                <a href="#"><i class="fa fa-cart-shopping cart"></i></a>
+            </div>
+            
+        </div>
+
+        <section id="product1" class="section-p1">
+            <h2>Reserve Tables</h2>
+            <p>Find available tables</p>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="img/table.jpeg" alt="">
+                    <div class="des">
+                        <span>Tables</span>
+                        <h5>Table 21</h5>
+                        <button class="reserve-btn">Reserve</button> <!-- Reserve button -->
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/tabl.jpeg" alt="">
+                    <div class="des">
+                        <span>Tables</span>
+                        <h5>Table 18</h5>
+                        <button class="reserve-btn">Reserve</button> <!-- Reserve button -->
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/tab.jpeg" alt="">
+                    <div class="des">
+                        <span>Tables</span>
+                        <h5>Table 1</h5>
+                        <button class="reserve-btn">Reserve</button> <!-- Reserve button -->
+                    </div>
+                </div>
+                
+            </div>
+            <div class="reserve-message" style="display: none;">Table reserved successfully!</div> <!-- Reserve success message -->
+        </section>
+        
+        <style>
+            /* CSS for reserve button */
+            .reserve-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px auto; /* Center the button horizontally */
+    cursor: pointer;
+}
+            
+            /* CSS for reserve message */
+            .reserve-message {
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                display: none;
+            }
+        </style>
+        
+        <script>
+            // JavaScript for handling reserve button click
+            document.addEventListener('DOMContentLoaded', function () {
+                var reserveButtons = document.querySelectorAll('.reserve-btn');
+                var reserveMessage = document.querySelector('.reserve-message');
+        
+                reserveButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        reserveMessage.style.display = 'block';
+                    });
+                });
+            });
+        </script>
+
+<title>Feedback Form</title>
+<style>
+    .feedback-section {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .feedback-section h2 {
+        text-align: center;
+    }
+
+    .feedback-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form select,
+    .feedback-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .feedback-form textarea {
+        resize: vertical;
+    }
+
+    .feedback-form button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .feedback-form button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .feedback-form button[type="submit"]:focus {
+        outline: none;
+    }
+</style>
+</head>
+<body>
+
+<section id="feedback" class="feedback-section">
+    <h2>Feedback</h2>
+    <p>We value your opinion. Please provide feedback about your dining experience:</p>
+    
+    <form id="feedback-form" class="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="">Select Rating</option>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select>
+        
+        <label for="comment">Comments:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</body>
+    
+    <script src="js/main.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
